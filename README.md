@@ -16,9 +16,9 @@ An assignment for parsing and reporting based upon logged data.
 The app will determine if a log file parameter has been given to it and if not, resort to reading input from stdin.
 Examples of running the app on a Unix command line:
 
-- python log_analyser.py <log-file>
-- cat <log-file> | python log_analyser.py
-- tail -F <log-file> | python log_analyser.py
+- python log_analyser.py \<log-file>
+- cat \<log-file> | python log_analyser.py
+- tail -F \<log-file> | python log_analyser.py
 
 
 # Running the tests
