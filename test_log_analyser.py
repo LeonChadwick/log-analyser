@@ -62,3 +62,32 @@ class TestLogAnalyser:
 
         mock_log = self._capture_logging_for_data(data)
         self._assert_log_counts(mock_log,0, 1)
+
+
+    def test_nostart_case(self):
+        """ log sample with no alertable cases """
+
+        data = """\
+    11:36:18,scheduled task 796, END,57672""".splitlines()
+
+        mock_log = self._capture_logging_for_data(data)
+        self._assert_log_counts(mock_log,0, 0)
+
+    def test_nostart_case(self):
+        """ log sample with no alertable cases """
+
+        data = """\
+    11:36:18,scheduled task 796, END,57672""".splitlines()
+
+        mock_log = self._capture_logging_for_data(data)
+        self._assert_log_counts(mock_log,0, 0)
+
+    def test_noend_case(self):
+        """ log sample with no alertable cases """
+
+        data = """\
+    11:36:11,scheduled task 796, START,57672""".splitlines()
+
+        mock_log = self._capture_logging_for_data(data)
+        self._assert_log_counts(mock_log,0, 0)
+
