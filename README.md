@@ -8,7 +8,8 @@ An assignment for parsing and reporting based upon logged data.
 - log_parser.py - helper logic for the selection, consumption and interpretation of a log file in the prescribed format.
 - logs.log - a sample of logs content
 - test-requirements.txt - Python requirements file that lists libraries/versions required for a project (in this case just for testing, not for runtime)
-- test_log_analyser.py - some unti tests of the base cases with helper logic to make addition of more test cases very simple with less boilerplate
+- test_log_analyser.py - some unit tests of the base cases with helper logic to make addition of more test cases very simple with less boilerplate
+- .idea/runConfigurations - when using Pycharm/Intellij IDE, preconfigured launch configurations made available to run the app and the pytest unit tests
 
 # Running the application
 
