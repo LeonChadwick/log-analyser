@@ -51,6 +51,10 @@ class LogAnalyser:
                 # Edge case where log hasn't captured the start time of a job - ignoring
                 pass
             else:
+                # TODO there is a question of whether logs can roll over to the next day, if so the timestamps could
+                #   go backwards and we might have jobs that took >24 hours to run so it would look like the timestamps
+                #   went forwards for a short while when in fact a job took ages.
+                #   assuming for now that the logs don't roll over to the next day.
                 elapsed_seconds = (l.timestamp - prior.timestamp).total_seconds()
                 if elapsed_seconds < self.WARN_THRESHOLD:
                     return
