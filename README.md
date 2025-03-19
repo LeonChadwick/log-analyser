@@ -12,3 +12,9 @@ Log columns are:
 - Job description
 - enum of {START|END}
 - process id (PID)
+
+
+# Open Questions To Enquire On With Stakeholder(s):
+- is the whitespace on the START/STOP status column data guaranteed to be there or should whitespace stripping be implemented?
+- would a job with same description running concurrently but with different pid be a valid scenario or should flag as error if detected?
+
